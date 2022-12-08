@@ -34,7 +34,7 @@ def read_student():
                    age=entry['age'])
 
 
-def save_students():
+def save_all_students():
     read_students()
     file = open('students.txt', 'w', encoding="utf-8")
 
@@ -56,7 +56,7 @@ def main_menu():
     print('1.  Register new Student  ')
     print('2.  Edit Student Details')
     print('3.  Delete Student')
-    print('4.  Export Student to text file')
+    print('4.  Export All Students to text file')
     print('5.  Export Student Details to text file')
     print('6.  to exit :)')
     return input('please enter your choice:  ')
@@ -116,7 +116,7 @@ def handle_choice(user_choice):
     elif user_choice == '3':
         delete_student()
     elif user_choice == '4':
-        save_students()
+        save_all_students()
     elif user_choice == '5':
         save_student()
     else:
